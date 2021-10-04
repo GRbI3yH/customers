@@ -22,6 +22,11 @@ public class CustomerRest {
     @Autowired
     private CustomerService customerService;
 
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String sayHello() {
+        return "hello";
+    }
+
     @RequestMapping(value = "/new", method = RequestMethod.PUT)
     public CustomerDto newCustomer(@RequestBody CustomerDto dto) {
         return customerService.newCustomer(dto);

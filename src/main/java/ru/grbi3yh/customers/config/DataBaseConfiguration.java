@@ -50,7 +50,7 @@ public class DataBaseConfiguration {
 
     private Properties additionalProperties() {
         Properties properties = new Properties();
-        properties.setProperty("hibernate.hbm2ddl.auto", "none");
+        properties.setProperty("hibernate.hbm2ddl.auto", "create");
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQL9Dialect");
         properties.setProperty("hibernate.jdbc.lob.non_contextual_creation", "true");
         properties.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
